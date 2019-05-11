@@ -1,0 +1,623 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<!-- If you delete this meta tag, the ground will open and swallow you. -->
+<meta name="viewport" content="width=device-width" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SUF Newsletter</title>
+	
+<!-- <link rel="stylesheet" type="text/css" href="stylesheets/email.css" > -->
+<style>
+/* ------------------------------------- 
+		GLOBAL 
+------------------------------------- */
+* { 
+	margin:0;
+	padding:0;
+	color:#ffffff;
+}
+* { font-family: Futura, "Trebuchet MS", Arial, sans-serif; }
+
+img { 
+	max-width: 100%; 
+}
+.collapse {
+	margin:0;
+	padding:0;
+}
+body {
+	-webkit-font-smoothing:antialiased; 
+	-webkit-text-size-adjust:none; 
+	width: 100%!important; 
+	height: 100%;
+}
+
+
+/* ------------------------------------- 
+		ELEMENTS 
+------------------------------------- */
+a { color: #2BA6CB;}
+
+.btn {
+	text-decoration:none;
+	color: #FFF;
+	background-color: #666;
+	padding:10px 16px;
+	font-weight:bold;
+	margin-right:10px;
+	text-align:center;
+	cursor:pointer;
+	display: inline-block;
+}
+
+p.callout {
+	padding:15px;
+	background-color:#ECF8FF;
+	margin-bottom: 15px;
+}
+.callout a {
+	font-weight:bold;
+	color: #2BA6CB;
+}
+
+table.social {
+/* 	padding:15px; */
+	background-color: #3d3d3d;
+	
+}
+.social .soc-btn {
+	padding: 3px 7px;
+	font-size:12px;
+	margin-bottom:10px;
+	text-decoration:none;
+	color: #FFF;font-weight:bold;
+	display:block;
+	text-align:center;
+}
+a.fb { background-color: #3B5998!important; }
+a.tw { background-color: #1daced!important; }
+a.gp { background-color: #DB4A39!important; }
+a.ms { background-color: #000!important; }
+a.ig { background-color: rgb(211, 174, 39)!important; }
+
+.sidebar .soc-btn { 
+	display:block;
+	width:100%;
+}
+
+/* ------------------------------------- 
+		HEADER 
+------------------------------------- */
+table.head-wrap { width: 100%;}
+
+.header.container table td.logo { padding: 15px; }
+.header.container table td.label { padding: 15px; padding-left:0px;}
+
+
+/* ------------------------------------- 
+		BODY 
+------------------------------------- */
+table.body-wrap { width: 100%;}
+
+
+/* ------------------------------------- 
+		FOOTER 
+------------------------------------- */
+table.footer-wrap { width: 100%;	clear:both!important;
+}
+.footer-wrap .container td.content  p { border-top: 1px solid rgb(215,215,215); padding-top:15px;}
+.footer-wrap .container td.content p {
+	font-size:10px;
+	font-weight: bold;
+	
+}
+
+
+/* ------------------------------------- 
+		TYPOGRAPHY 
+------------------------------------- */
+.centerthis{text-align: center;}
+.price{
+	background:#ffffff;
+	border:2px solid #0eae9c;
+	box-shadow:2px 4px 3px rgba(0,0,0,.7);
+	border-radius:50px;
+	color:#225c56;
+	padding:5px;
+	font-weight: bolder;
+}
+.text-space{
+	padding:10px;
+}
+.green-bg{
+	background:#225c56;
+}
+.grey-bg{
+	background:#3d3d3d;
+}
+.highlight{
+	color:#70fff0;
+	font-weight:bolder;
+	text-decoration:underline;
+}
+.highlight-alt{
+	color:#ffffff;
+	background:#225c56;
+	font-weight:bolder;
+	padding:5px;	
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	line-height: 1.1;
+	margin-bottom:15px;
+	color:#225c56;
+	color:#ffffff;
+	color:#70fff0;
+	font-weight: bolder;
+	background: #225c56;
+	color:#fff;
+	padding:10px;
+	width:auto;
+	display:inline-block;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 60%; color: #ffffff; line-height: 0; text-transform: none; }
+
+h1 { font-weight:bolder; font-size: 44px;}
+h2 { font-weight:bolder; font-size: 37px;}
+h3 { font-weight:bolder; font-size: 27px;}
+h4 { font-weight:bolder; font-size: 23px;}
+h5 { font-weight:bolder; font-size: 17px;}
+h6 { font-weight:bolder; font-size: 14px; text-transform: uppercase; color:#fff;}
+
+.collapse { margin:0!important;}
+
+p, ul { 
+	margin-bottom: 10px; 
+	font-weight: normal; 
+	font-size:14px; 
+	line-height:1.6;
+}
+p.lead { font-size:17px; }
+p.last { margin-bottom:0px;}
+
+ul li {
+	margin-left:5px;
+	list-style-position: inside;
+}
+
+/* ------------------------------------- 
+		SIDEBAR 
+------------------------------------- */
+ul.sidebar {
+	background:#ebebeb;
+	display:block;
+	list-style-type: none;
+}
+ul.sidebar li { display: block; margin:0;}
+ul.sidebar li a {
+	text-decoration:none;
+	color: #fff;
+	padding:10px 16px;
+/* 	font-weight:bold; */
+	margin-right:10px;
+/* 	text-align:center; */
+	cursor:pointer;
+	border-bottom: 1px solid #3d3d3d;
+	border-top: 1px solid #3d3d3d;
+	display:block;
+	margin:0;
+}
+ul.sidebar li a.last { border-bottom-width:0px;}
+ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.sidebar li a h5,ul.sidebar li a h6,ul.sidebar li a p { margin-bottom:0!important;}
+
+
+
+/* --------------------------------------------------- 
+		RESPONSIVENESS
+		Nuke it from orbit. It's the only way to be sure. 
+------------------------------------------------------ */
+
+/* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+.container {
+	display:block!important;
+	max-width:600px!important;
+	margin:0 auto!important; /* makes it centered */
+	clear:both!important;
+}
+
+/* This should also be a block element, so that it will fill 100% of the .container */
+.content {
+	padding:15px;
+	max-width:600px;
+	margin:0 auto;
+	display:block; 
+}
+
+/* Let's make sure tables in the content area are 100% wide */
+.content table { width: 100%; }
+
+
+/* Odds and ends */
+.column {
+	width: 300px;
+	float:left;
+}
+.column tr td { padding: 15px; }
+.column-wrap { 
+	padding:0!important; 
+	margin:0 auto; 
+	max-width:600px!important;
+}
+.column table { width:100%;}
+.social .column {
+	width: 280px;
+	min-width: 279px;
+	float:left;
+}
+
+/* Be sure to place a .clear element after each set of columns, just to be safe */
+.clear { display: block; clear: both; }
+
+
+/* ------------------------------------------- 
+		PHONE
+		For clients that support media queries.
+		Nothing fancy. 
+-------------------------------------------- */
+@media only screen and (max-width: 600px) {
+
+	.price{display:none;}
+	.left-img{display:none;}
+	
+	a[class="btn"] { display:block!important; margin-bottom:10px!important; background-image:none!important; margin-right:0!important;}
+
+	div[class="column"] { width: auto!important; float:none!important;}
+	
+	table.social div[class="column"] {
+		width:auto!important;
+	}
+
+}
+/* hotfixes */
+.logo{width:150px;}
+
+</style>
+
+<!--
+	IMAGES: HOSTED EXTERNALLY
+
+<a href="https://ibb.co/HPbGN8G"><img src="https://i.ibb.co/4SX4sr4/evening.png" alt="evening" border="0"></a>
+<a href="https://ibb.co/3FL9bNY"><img src="https://i.ibb.co/DMSHFCg/school-Drop-Off.png" alt="school-Drop-Off" border="0"></a>
+img src="https://i.ibb.co/7WK7BZv/adults-MMA.png" alt="adults-MMA" border="0"></a>
+img src="https://i.ibb.co/tz0Zs99/bjj.png" alt="bjj" border="0"></a>
+<img src="https://i.ibb.co/F3VXc92/kidsfit.png" alt="kidsfit" border="0"></a>
+<img src="https://i.ibb.co/ZTDN9TG/MMAkids.png" alt="MMAkids" border="0"></a>
+-->
+
+
+ <link href="//db.onlinewebfonts.com/c/e8c6a63541de0a4211a9358cbe74690f?family=Futura" rel="stylesheet" type="text/css"/>
+
+
+</head>
+ 
+<body bgcolor="#3d3d3d" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<!-- HEADER -->
+<table class="head-wrap" bgcolor="#3d3d3d">
+	<tr>
+		<td></td>
+		<td class="header container" align="">
+			
+			<!-- /content -->
+			<div class="content">
+				<table bgcolor="#3d3d3d" >
+					<tr>
+						<td><img class="logo" src="https://i.ibb.co/pLTfmVR/suflogocircletrans.png/" /></td>
+						<td align="right"><h3 class="collapse highlight-alt">Newsletter</h6></td>
+					</tr>
+				</table>
+			</div><!-- /content -->
+			
+		</td>
+		<td></td>
+	</tr>
+</table><!-- /HEADER -->
+
+<!-- BODY -->
+<table class="body-wrap" bgcolor="#3d3d3d">
+	<tr>
+		<td></td>
+		<td class="container" align="" bgcolor="#3d3d3d">
+			
+			<!-- content -->
+			<div class="content">
+				<table>
+					<tr>
+						<td>
+							<h1>Hello!</h1>
+							<br><br>
+							<p class="lead">We are bringing fitness to <span class="highlight">you</span> in the <span class="highlight-alt">Wigan Borough.</span> <br><br>  At <span class="highlight-alt">Suits U Fitness</span> we have something for everyone. <br><br> Check out what's on right now for <span class="highlight">you</span> at <span class="highlight-alt">Wigan's friendliest gym!</span><br></p>
+						</td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+							<td>
+								<!-- A Real Hero (and a real human being) -->
+								<img src="https://i.ibb.co/DMSHFCg/school-Drop-Off.png" /><!-- /hero -->
+							</td>
+					</tr>
+					<tr >
+						<td>
+							<p class="text-space">Living as a parent, life is hectic.  Sometimes it's hard to fit fitness around our lifestyles.  That's why we have a circuit just for you.  Watch the pounds drop off as you have fun in these convenient classes.</p>
+					</tr>
+					<tr>
+						<td>
+							<img src="https://i.ibb.co/4SX4sr4/evening.png" /><!-- /hero -->
+						</td>
+					</tr>
+					<tr>
+							<td>
+								<p class="text-space">You've worked hard.  Now its time to play hard.  Ditch the post-work pint at the pub for a healthier, lighter you with our after-work circuit.</p>
+							</td>
+						</tr>
+				</table>
+			</div><!-- /content -->
+
+			<div class="content">
+					<table>
+						
+					</table>
+			</div>
+			
+			<!-- content -->
+			<div class="content">
+				
+				<table bgcolor="#3d3d3d">
+					<tr>
+						<td class="small left-img" width="20%" style="vertical-align: top;"><img src="https://i.ibb.co/ZTDN9TG/MMAkids.png" /></td>
+						<td>
+							<h4>Kids Mixed Martial Arts (6-12yrs)</h4>
+							<br>
+							<span class="highlight-alt">Wednesdays</span>
+							<span class="highlight">6.00 - 6.45pm</span>
+							<span class="price">£3.50</span></span>
+							<br><br>
+							<p>
+									<span class="highlight">FAMILY FITNESS:</span> Our Kids MMA is on at the <span class="highlight-alt">same time as the after-work workout class </span>which makes it ideal for parents looking to get the family fit.  We work with a professional MMA fighter to deliver our classes and kids develop strength and stamina while building confidence in a safe environment.
+							</p>
+						</td>
+					</tr>
+				</table>
+			
+			</div><!-- /content -->
+			
+			<!-- content -->
+			<div class="content"><table bgcolor="#3d3d3d">
+				<tr>
+					<td class="small left-img" width="20%" style="vertical-align: top;"><img src="https://i.ibb.co/7WK7BZv/adults-MMA.png" /></td>
+					<td>
+						<h4>Adults Mixed Martial Arts (13yrs+)</h4>
+						<br>
+						<span class="highlight-alt">Wednesdays</span>
+						<span class="highlight">7.00 - 8.00pm</span>
+						<span class="price">£5</span>
+						<br>
+						<br>
+						 <p>
+							Our adult MMA class is £5/session and is constructed and conducted by an actual professional fighter, our classes accommodate any level of skill: complete beginner to advanced athlete.  This makes our adult class perfect for aspiring fighters and parents wanting to get in shape right after you put the kids in.
+						 </p>
+					</td>
+				</tr>
+			</table></div><!-- /content -->
+			
+	
+			<!-- content -->
+			<div class="content"><table bgcolor="#3d3d3d">
+				<tr>
+					<td class="small left-img" width="20%" style="vertical-align: top; padding-right:10px;"><img src="https://i.ibb.co/tz0Zs99/bjj.png" /></td>
+					<td>
+						<h4>Brazillian Jiu Jitsu (13yrs+)</h4>
+						<br>
+						<span class="highlight-alt">Thursdays</span>
+						<span class="highlight">7.00 - 8.00pm</span>
+						<span class="price">£5</span>
+						<br>
+						<br>
+						 <p>
+								Our Jiu-Jitsu classes are a great way to improve motor coordination, strength and stamina and burn calories whilst having fun.  Jiu Jitsu is a martial art and our classes will guide you through beginner level right through to advanced skills and sparring.
+						</p>
+					</td>
+				</tr>
+			</table></div><!-- /content -->
+			
+					<!-- content -->
+					<div class="content"><table bgcolor="#3d3d3d">
+							<tr>
+								<td class="small left-img" width="20%" style="vertical-align: top; padding-right:10px;"><img src="https://i.ibb.co/F3VXc92/kidsfit.png" /></td>
+								<td>
+									<h4>Kids Strength & Fitness (7-14yrs)</h4>
+									<br>
+									<span class="highlight-alt">Sundays</span>
+									<span class="highlight">10.30 - 11.30am</span>
+									<span class="highlight-alt">Enquire for details</span>
+									<br>
+									<br>
+									 <p>
+											We offer a well structured environment for kids In our MMA classes however if your child wants a more general approach, our Sunday Strength & Conditioning class allows children to build foundational strength and instils good habits for the future.
+                            	</p>
+								</td>
+							</tr>
+						</table></div><!-- /content -->
+			
+
+
+
+
+
+	<!-- content -->
+	<div class="content">
+			
+			<table>
+				<tr>
+						<td>
+							<!-- A Real Hero (and a real human being) -->
+							<img src="https://i.ibb.co/88CHXmT/ptsessions.png" /><!-- /hero -->
+						</td>
+				</tr>
+				<tr >
+					<td>
+						<p class="text-space">
+							Need a more personalised approach?  Our certified personal training might be what you are looking for.
+							We offer customised diet plans, workout plans and specific coaching to suit your needs.
+							We tailor everything to suit your goals and work with you to achieve your fitness ambitions however big or small they may be.
+						</p>
+					</td>
+				</tr>
+			
+			</table>
+		</div><!-- /content -->
+
+			<!-- content -->
+	<div class="content centerthis">
+			
+			<table>
+					<tr >
+							<td>
+								<h3 class="green-bg">
+									Memberships
+								</h3>
+							</td>
+						</tr>
+						<tr >
+								<td>
+									<h4 class="grey-bg">
+										Memberships start from just <span class="highlight">£25</span> for a month. <br>  <br>
+										 <span class="highlight-alt">NO CONTRACT.</span> 
+										 <br><br>
+										<span class="highlight-alt">NO SIGN UP FEES. </span>
+										<br><br> 
+										<span class="highlight-alt">EVER. </span>
+										<br> <br>
+										(16yrs+)
+									</h3>
+								</td>
+							</tr>
+							<table>
+									<tr>
+											<td>
+												<!-- A Real Hero (and a real human being) -->
+												<img src="https://i.ibb.co/4srTv1n/586105-CE-3-C11-4271-AE06-449-B3-F73-D6-F9.jpg" /><!-- /hero -->
+											</td>
+									</tr>
+									<tr >
+											<td>		
+												<br>
+												</td>
+											</tr>
+				<tr >
+					<td>
+						<h3 class="green-bg">
+							MORE CLASSES & LONGER AND EARLIER OPENING HOURS in the coming months!
+						</h3>
+					</td>
+				</tr>
+			
+			</table>
+		</div><!-- /content -->
+
+
+
+
+
+
+
+
+			<!-- content -->
+			<div class="content">
+				<table bgcolor="#3d3d3d">
+					<tr>
+						<td>
+							
+							<!-- social & contact -->
+							<table bgcolor="#3d3d3d" class="social" width="100%">
+								<tr>
+									<td>
+										
+										<!--- column 1 -->
+										<div class="column">
+											<table bgcolor="#3d3d3d" cellpadding="" align="left">
+										<tr>
+											<td>				
+												
+												<h5 class="">Connect with Us:</h5>
+												<p class=""><a href="https://facebook.com/suitsufitness" class="soc-btn fb">Facebook</a> <a href="https://instagram.com/suitsufitness" class="soc-btn ig">Instagram</a></p>
+						
+												
+											</td>
+										</tr>
+									</table><!-- /column 1 -->
+										</div>
+										
+										<!--- column 2 -->
+										<div class="column">
+											<table bgcolor="#3d3d3d" cellpadding="" align="left">
+										<tr>
+											<td>				
+																			
+												<h5 class="">Contact Info:</h5>												
+												<p>Phone: <strong>01942 729732</strong><br/>
+                Email: <strong><a href="emailto:contact@suitsufitness.com">contact@suitsufitness.com</a></strong></p>
+                
+											</td>
+										</tr>
+									</table><!-- /column 2 -->	
+										</div>
+										
+										<div class="clear"></div>
+	
+									</td>
+								</tr>
+							</table><!-- /social & contact -->
+							
+						</td>
+					</tr>
+				</table>
+			</div><!-- /content -->
+			
+
+		</td>
+		<td></td>
+	</tr>
+</table><!-- /BODY -->
+
+<!-- FOOTER -->
+<table class="footer-wrap">
+	<tr>
+		<td></td>
+		<td class="container">
+			
+				<!-- content 
+				<div class="content">
+					<table>
+						<tr>
+							<td align="center">
+								<p>
+									<a href="#">Terms</a> |
+									<a href="#">Privacy</a> |
+									<a href="#"><unsubscribe>Unsubscribe</unsubscribe></a>
+								</p>
+							</td>
+						</tr>
+					</table>
+				</div><!-- /content -->
+				
+		</td>
+		<td></td>
+	</tr>
+</table><!-- /FOOTER -->
+
+</body>
+</html>
